@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 1 </title>
+    <style>
+            body {
+                background-image: url('https://avatars.mds.yandex.net/i?id=c55bbf3c571e9d460c7ee7382b67ee63_l-9198383-images-thumbs&n=13');
+        }
+        ul { /* списка */
+            list-style: none;
+            padding: 0;
+        }
+        li { /* элементов списка */
+            padding: 15px; /* внутрение отступы */
+            margin: 5px 0; /* внешние отступы */
+            color: #ffffff; /* цвет */
+            font-weight: bold;/* жирный шрифт */
+            text-align: center;/* выравнивание */
+            border-radius: 5px;/* закругление */
+        }
+        /* Первый элемент */
+        li:first-child {
+            background: linear-gradient(to right, #ff9a9e, #000000);
+            width: 300px;
+            height: 100px
+        }
+        /* Последний элемент */
+        li:last-child {
+            background: linear-gradient(to right, #a1c4fd, #ff0000);
+            width: 300px;
+            height: 100px
+        }
+        /* Второй элемент */
+        li:nth-child(2) {
+            background: linear-gradient(to right, #ffecd2, #4500b4);
+            width: 300px;
+            height: 100px
+        }
+        /* Третий элемент */
+        li:nth-child(3) {
+            background: linear-gradient(to right, #84fab0, #00581b);
+            width: 300px;
+            height: 100px
+        }
+        /* Четвёртый элемент */
+        li:nth-child(4) {
+            background: linear-gradient(to right, #d4fc79, #000000);
+            width: 300px;
+            height: 100px
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>Первый элемент</li>
+        <li>Второй элемент</li>
+        <li>Третий элемент</li>
+        <li>Четвёртый элемент</li>
+        <li>Пятый элемент</li>
+    </ul>
+</body>
+</html>
