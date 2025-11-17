@@ -1,0 +1,228 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Comfortaa', cursive;
+    background-color: #FFB3D0;
+    color: #5C3D99;
+    line-height: 1.6;
+}
+
+/* Шапка */
+header {
+    background-color: #FF6F91;
+    height: 150px;
+    padding: 0 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 12px rgba(92, 61, 153, 0.2);
+}
+
+.logo {
+    height: 100px;
+    width: auto;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #5C3D99;
+    font-weight: 600;
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #FFE6A7;
+    transform: translateY(-3px);
+}
+
+/* Главный блок */
+.hero {
+    margin: 50px 200px;
+    background-color: #B3E7FF;
+    border-radius: 30px;
+    padding: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 10px 25px rgba(92, 61, 153, 0.15);
+    height: 867px;
+    width: 1696px;
+    max-width: calc(100vw - 400px);
+}
+
+.hero-content {
+    flex: 1;
+    padding-right: 50px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 30px;
+    color: #5C3D99;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 40px;
+    color: #5C3D99;
+    line-height: 1.8;
+}
+
+.cta-button {
+    background-color: #FF6F91;
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    font-size: 18px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 111, 145, 0.4);
+}
+
+.cta-button:hover {
+    background-color: #FFE6A7;
+    color: #5C3D99;
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(255, 111, 145, 0.6);
+}
+
+.hero-gif {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-gif img {
+    max-width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Блоки с кирбиками */
+.kirby-section {
+    margin: 100px 200px;
+}
+
+.kirby-cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.kirby-card {
+    background-color: #FFE6A7;
+    border-radius: 25px;
+    width: 450px;
+    height: 550px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 8px 20px rgba(92, 61, 153, 0.15);
+    transition: transform 0.3s ease;
+}
+
+.kirby-card:hover {
+    transform: translateY(-10px);
+}
+
+.kirby-image {
+    width: 100%;
+    height: 300px;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 25px;
+}
+
+.kirby-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.kirby-name {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #5C3D99;
+}
+
+.kirby-price {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #FF6F91;
+}
+
+.buy-button {
+    background-color: #B3E7FF;
+    color: #5C3D99;
+    border: none;
+    padding: 12px 35px;
+    font-size: 16px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.buy-button:hover {
+    background-color: #5C3D99;
+    color: #FFE6A7;
+}
+
+/* Подвал */
+footer {
+    background-color: #5C3D99;
+    color: #FFE6A7;
+    padding: 50px 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.footer-section {
+    flex: 1;
+    padding: 0 20px;
+}
+
+.footer-section h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #FFB3D0;
+}
+
+.footer-section p, .footer-section a {
+    color: #FFE6A7;
+    margin-bottom: 10px;
+    display: block;
+    text-decoration: none;
+}
+
+.footer-section a:hover {
+    color: #B3E7FF;
+}
+
+.copyright {
+    text-align: center;
+    padding: 20px;
+    background-color: #4A2F7A;
+    color: #FFE6A7;
+}
