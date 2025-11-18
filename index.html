@@ -18,6 +18,11 @@
                 <li><a href="#">Контакты</a></li>
             </ul>
         </nav>
+        <div class="mobile-menu-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
     </header>
 
     <!-- Главный блок -->
@@ -34,30 +39,41 @@
 
     <!-- Блоки с кирбиками -->
     <section class="kirby-section">
-        <div class="kirby-cards">
-            <div class="kirby-card">
-                <div class="kirby-image">
-                    <img src="img/img1.jpg" alt="Стесняшка бояшка">
+        <h2 class="section-title">Наши кирбики</h2>
+        <div class="kirby-cards-container">
+            <button class="carousel-arrow carousel-arrow-prev">‹</button>
+            <button class="carousel-arrow carousel-arrow-next">›</button>
+            
+            <div class="kirby-cards">
+                <div class="kirby-card active">
+                    <div class="kirby-image">
+                        <img src="img/img1.jpg" alt="Стесняшка бояшка">
+                    </div>
+                    <h3 class="kirby-name">Стесняшка бояшка</h3>
+                    <p class="kirby-price">999 руб.</p>
+                    <button class="buy-button">Забрать к себе</button>
                 </div>
-                <h3 class="kirby-name">Стесняшка бояшка</h3>
-                <p class="kirby-price">999 руб.</p>
-                <button class="buy-button">Забрать к себе</button>
+                <div class="kirby-card">
+                    <div class="kirby-image">
+                        <img src="img/img2.jpg" alt="Кирби 2">
+                    </div>
+                    <h3 class="kirby-name">Брутальный Кирбик</h3>
+                    <p class="kirby-price">2299 руб.</p>
+                    <button class="buy-button">Забрать к себе</button>
+                </div>
+                <div class="kirby-card">
+                    <div class="kirby-image">
+                        <img src="img/img3.jpg" alt="Кирби 3">
+                    </div>
+                    <h3 class="kirby-name">Кирби чмоня</h3>
+                    <p class="kirby-price">1599 руб.</p>
+                    <button class="buy-button">Забрать к себе</button>
+                </div>
             </div>
-            <div class="kirby-card">
-                <div class="kirby-image">
-                    <img src="img/img2.jpg" alt="Кирби 2">
-                </div>
-                <h3 class="kirby-name">Брутальный Кирбик</h3>
-                <p class="kirby-price">2299 руб.</p>
-                <button class="buy-button">Забрать к себе</button>
-            </div>
-            <div class="kirby-card">
-                <div class="kirby-image">
-                    <img src="img/img3.jpg" alt="Кирби 3">
-                </div>
-                <h3 class="kirby-name">Кирби чмоня</h3>
-                <p class="kirby-price">1599 руб.</p>
-                <button class="buy-button">Забрать к себе</button>
+            <div class="carousel-dots">
+                <span class="dot active" data-index="0"></span>
+                <span class="dot" data-index="1"></span>
+                <span class="dot" data-index="2"></span>
             </div>
         </div>
     </section>
@@ -85,5 +101,7 @@
     <div class="copyright">
         <p>© 2023-2025 Все права защищены. Магазин "Lymirenia"</p>
     </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
