@@ -9,36 +9,38 @@ body {
     background-color: #FFB3D0;
     color: #5C3D99;
     line-height: 1.6;
+    overflow-x: hidden;
 }
 
 /* Шапка */
 header {
     background-color: #FF6F91;
-    height: 150px;
-    padding: 0 150px;
+    height: 80px;
+    padding: 0 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     box-shadow: 0 4px 12px rgba(92, 61, 153, 0.2);
+    position: relative;
 }
 
 .logo {
-    height: 100px;
+    height: 60px;
     width: auto;
 }
 
 nav ul {
     display: flex;
     list-style: none;
-    gap: 40px;
+    gap: 20px;
 }
 
 nav a {
     text-decoration: none;
     color: #5C3D99;
     font-weight: 600;
-    font-size: 18px;
-    padding: 10px 20px;
+    font-size: 16px;
+    padding: 8px 16px;
     border-radius: 25px;
     transition: all 0.3s ease;
 }
@@ -48,46 +50,61 @@ nav a:hover {
     transform: translateY(-3px);
 }
 
+.mobile-menu-btn {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 4px;
+}
+
+.mobile-menu-btn span {
+    width: 25px;
+    height: 3px;
+    background-color: #5C3D99;
+    border-radius: 2px;
+    transition: 0.3s;
+}
+
 /* Главный блок */
 .hero {
-    margin: 50px 200px;
+    margin: 30px 20px;
     background-color: #B3E7FF;
-    border-radius: 30px;
-    padding: 60px;
+    border-radius: 20px;
+    padding: 30px;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
     box-shadow: 0 10px 25px rgba(92, 61, 153, 0.15);
-    height: 867px;
-    width: 1696px;
-    max-width: calc(100vw - 400px);
+    max-width: calc(100vw - 40px);
 }
 
 .hero-content {
     flex: 1;
-    padding-right: 50px;
+    padding-right: 0;
+    margin-bottom: 30px;
+    text-align: center;
 }
 
 .hero h1 {
-    font-size: 48px;
-    margin-bottom: 30px;
+    font-size: 28px;
+    margin-bottom: 20px;
     color: #5C3D99;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .hero p {
-    font-size: 20px;
-    margin-bottom: 40px;
+    font-size: 16px;
+    margin-bottom: 30px;
     color: #5C3D99;
-    line-height: 1.8;
+    line-height: 1.6;
 }
 
 .cta-button {
     background-color: #FF6F91;
     color: white;
     border: none;
-    padding: 15px 40px;
-    font-size: 18px;
+    padding: 12px 30px;
+    font-size: 16px;
     border-radius: 50px;
     cursor: pointer;
     font-weight: 600;
@@ -107,48 +124,64 @@ nav a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
 }
 
 .hero-gif img {
     max-width: 100%;
-    border-radius: 20px;
+    border-radius: 15px;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
 }
 
 /* Блоки с кирбиками */
 .kirby-section {
-    margin: 100px 200px;
+    margin: 50px 20px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 30px;
+    color: #5C3D99;
+}
+
+.kirby-cards-container {
+    position: relative;
+    overflow: hidden;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .kirby-cards {
     display: flex;
-    justify-content: space-between;
-    gap: 40px;
+    transition: transform 0.3s ease;
+    gap: 0;
 }
 
 .kirby-card {
     background-color: #FFE6A7;
-    border-radius: 25px;
-    width: 450px;
-    height: 550px;
-    padding: 25px;
+    border-radius: 20px;
+    width: 100%;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     box-shadow: 0 8px 20px rgba(92, 61, 153, 0.15);
-    transition: transform 0.3s ease;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+    margin: 0;
 }
 
-.kirby-card:hover {
-    transform: translateY(-10px);
+.kirby-card.active {
+    transform: scale(1.02);
 }
 
 .kirby-image {
     width: 100%;
-    height: 300px;
-    border-radius: 20px;
+    height: 250px;
+    border-radius: 15px;
     overflow: hidden;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 }
 
 .kirby-image img {
@@ -158,14 +191,15 @@ nav a:hover {
 }
 
 .kirby-name {
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 700;
     margin-bottom: 15px;
     color: #5C3D99;
+    text-align: center;
 }
 
 .kirby-price {
-    font-size: 22px;
+    font-size: 18px;
     font-weight: 600;
     margin-bottom: 20px;
     color: #FF6F91;
@@ -175,8 +209,8 @@ nav a:hover {
     background-color: #B3E7FF;
     color: #5C3D99;
     border: none;
-    padding: 12px 35px;
-    font-size: 16px;
+    padding: 10px 25px;
+    font-size: 14px;
     border-radius: 50px;
     cursor: pointer;
     font-weight: 600;
@@ -188,32 +222,89 @@ nav a:hover {
     color: #FFE6A7;
 }
 
+/* Стрелки карусели */
+.carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #FF6F91;
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 111, 145, 0.4);
+}
+
+.carousel-arrow:hover {
+    background-color: #FFE6A7;
+    color: #5C3D99;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-arrow-prev {
+    left: 10px;
+}
+
+.carousel-arrow-next {
+    right: 10px;
+}
+
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #B3E7FF;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dot.active {
+    background-color: #5C3D99;
+}
+
 /* Подвал */
 footer {
     background-color: #5C3D99;
     color: #FFE6A7;
-    padding: 50px 150px;
+    padding: 30px 20px;
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+    flex-direction: column;
+    gap: 30px;
 }
 
 .footer-section {
     flex: 1;
-    padding: 0 20px;
+    padding: 0 10px;
 }
 
 .footer-section h3 {
-    font-size: 20px;
-    margin-bottom: 20px;
+    font-size: 18px;
+    margin-bottom: 15px;
     color: #FFB3D0;
 }
 
 .footer-section p, .footer-section a {
     color: #FFE6A7;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
     display: block;
     text-decoration: none;
+    font-size: 14px;
 }
 
 .footer-section a:hover {
@@ -222,7 +313,264 @@ footer {
 
 .copyright {
     text-align: center;
-    padding: 20px;
+    padding: 15px;
     background-color: #4A2F7A;
     color: #FFE6A7;
+    font-size: 14px;
+}
+
+/* Десктопная версия */
+@media (min-width: 768px) {
+    header {
+        height: 150px;
+        padding: 0 150px;
+    }
+
+    .logo {
+        height: 100px;
+    }
+
+    nav ul {
+        gap: 40px;
+    }
+
+    nav a {
+        font-size: 18px;
+        padding: 10px 20px;
+    }
+
+    .hero {
+        margin: 50px auto;
+        padding: 60px;
+        flex-direction: row;
+        height: auto;
+        max-width: calc(100vw - 400px);
+    }
+
+    .hero-content {
+        padding-right: 50px;
+        margin-bottom: 0;
+        text-align: left;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+        margin-bottom: 30px;
+    }
+
+    .hero p {
+        font-size: 20px;
+        margin-bottom: 40px;
+        line-height: 1.8;
+    }
+
+    .cta-button {
+        padding: 15px 40px;
+        font-size: 18px;
+    }
+
+    .kirby-section {
+        margin: 100px auto;
+        padding: 0 20px;
+        max-width: 1200px;
+    }
+
+    .section-title {
+        font-size: 32px;
+        margin-bottom: 50px;
+    }
+
+    .kirby-cards {
+        width: 100%;
+        transform: none !important;
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+    }
+
+    .kirby-card {
+        width: 350px;
+        height: 500px;
+        padding: 25px;
+        margin: 0;
+        flex-shrink: 0;
+    }
+
+    .kirby-card.active {
+        transform: none;
+    }
+
+    .kirby-image {
+        height: 280px;
+        margin-bottom: 25px;
+    }
+
+    .kirby-name {
+        font-size: 24px;
+    }
+
+    .kirby-price {
+        font-size: 22px;
+    }
+
+    .buy-button {
+        padding: 12px 35px;
+        font-size: 16px;
+    }
+
+    /* Скрываем стрелки и точки на десктопе */
+    .carousel-arrow,
+    .carousel-dots {
+        display: none;
+    }
+
+    footer {
+        padding: 50px 150px;
+        flex-direction: row;
+    }
+
+    .footer-section {
+        padding: 0 20px;
+    }
+
+    .footer-section h3 {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    .footer-section p, .footer-section a {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+    .copyright {
+        padding: 20px;
+        font-size: 16px;
+    }
+}
+
+/* Мобильная версия */
+@media (max-width: 767px) {
+    .kirby-cards {
+        width: 300%;
+    }
+
+    .kirby-card {
+        width: calc(100vw - 80px);
+        margin: 0 10px;
+        height: 450px;
+    }
+
+    .carousel-arrow {
+        display: flex;
+    }
+
+    .carousel-dots {
+        display: flex;
+    }
+}
+
+/* Адаптация для очень маленьких экранов */
+@media (max-width: 480px) {
+    .kirby-section {
+        margin: 30px 10px;
+    }
+
+    /* ... остальные стили остаются без изменений ... */
+
+.kirby-cards {
+    display: flex;
+    transition: transform 0.4s ease-in-out; /* Увеличил время анимации для плавности */
+    gap: 0;
+}
+
+.kirby-card {
+    background-color: #FFE6A7;
+    border-radius: 20px;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 8px 20px rgba(92, 61, 153, 0.15);
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+    margin: 0;
+    opacity: 0.7;
+    transform: scale(0.95);
+}
+
+.kirby-card.active {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* ... остальные стили остаются без изменений ... */
+
+/* Мобильная версия */
+@media (max-width: 767px) {
+    .kirby-cards {
+        width: 300%; /* 3 карточки по 100% */
+    }
+
+    .kirby-card {
+        width: calc(100vw - 80px);
+        margin: 0 10px;
+        height: 450px;
+    }
+
+    .carousel-arrow {
+        display: flex;
+    }
+
+    .carousel-dots {
+        display: flex;
+    }
+}
+
+/* ... остальные медиа-запросы остаются без изменений ... */
+
+    .carousel-arrow-prev {
+        left: 5px;
+    }
+
+    .carousel-arrow-next {
+        right: 5px;
+    }
+}
+
+/* Мобильное меню */
+@media (max-width: 767px) {
+    nav ul {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #FF6F91;
+        flex-direction: column;
+        padding: 20px;
+        box-shadow: 0 4px 12px rgba(92, 61, 153, 0.2);
+        z-index: 1000;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    .mobile-menu-btn {
+        display: flex;
+    }
+
+    .mobile-menu-btn.active span:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 6px);
+    }
+
+    .mobile-menu-btn.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .mobile-menu-btn.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
 }
