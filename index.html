@@ -3,105 +3,187 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lymirenia</title>
+    <title>Lymirenia - Магазин пушистых кирбиков</title>
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
 </head>
 <body>
-    <!-- Шапка -->
+    <!-- Шапка  -->
     <header>
-        <img src="img/logo.svg" alt="Логотип Кирбики" class="logo">
+        <div class="logo-container">
+            <img src="img/logo.svg" alt="Lymirenia - магазин кирбиков" class="logo">
+            <span class="logo-text">Lymirenia</span>
+        </div>
         <nav>
             <ul>
-                <li><a href="#">Главная</a></li>
-                <li><a href="#">Наши кирбики</a></li>
-                <li><a href="#">Контакты</a></li>
+                <li><a href="#" class="nav-link active">Главная</a></li>
+                <li><a href="#" class="nav-link">Наши кирбики</a></li>
+                <li><a href="#" class="nav-link">Отзывы</a></li>
+                <li><a href="#" class="nav-link">Контакты</a></li>
+                <li><a href="#" class="nav-link special">Акции!</a></li>
             </ul>
         </nav>
-        <div class="mobile-menu-btn">
-            <span></span>
-            <span></span>
-            <span></span>
+        <div class="cart-icon">
+            🛒 <span class="cart-count">0</span>
         </div>
     </header>
 
-    <!-- Главный блок -->
+    <!-- Главный блок  -->
     <section class="hero">
         <div class="hero-content">
-            <h1>Купи лучшего кирбика</h1>
-            <p>Наши кирбики - самые милые, пушистые и забавные существа во всей вселенной! Они принесут радость и счастье в ваш дом. Только у нас вы найдете уникальных кирбиков с самыми разными характерами и способностями. Не упустите возможность завести себе самого лучшего друга!</p>
-            <button class="cta-button">Кирбик тут просто жм</button>
+            <h1>Купи самого пушистого друга!</h1>
+            <p>Привет! Мы Лера и Макс, и уже 3 года мы занимаемся тем, что находим самых милых и необычных кирбиков по всей вселенной! Каждый наш кирбик уникален - у них есть свой характер, привычки и даже маленькие секретики. Они ждут, когда попадут в любящие руки!</p>
+            <p class="highlight">P.S. Некоторые из них умеют петь! 🎵</p>
+            <div class="hero-buttons">
+                <button class="cta-button main-btn">Выбрать кирбика</button>
+                <button class="cta-button secondary-btn">Узнать историю</button>
+            </div>
         </div>
         <div class="hero-gif">
-            <img src="img/kirby.gif" alt="Забавный кирбик">
+            <img src="img/kirby-dance.gif" alt="Кирбик танцует" onerror="this.src='img/kirby.gif'">
+            <div class="gif-caption">Это Чмоня, он всегда рад новым друзьям!</div>
         </div>
     </section>
 
-    <!-- Блоки с кирбиками -->
+    <!-- Блоки с кирбиками  -->
     <section class="kirby-section">
-        <h2 class="section-title">Наши кирбики</h2>
-        <div class="kirby-cards-container">
-            <button class="carousel-arrow carousel-arrow-prev">‹</button>
-            <button class="carousel-arrow carousel-arrow-next">›</button>
-            
-            <div class="kirby-cards">
-                <div class="kirby-card active">
-                    <div class="kirby-image">
-                        <img src="img/img1.jpg" alt="Стесняшка бояшка">
-                    </div>
-                    <h3 class="kirby-name">Стесняшка бояшка</h3>
-                    <p class="kirby-price">999 руб.</p>
-                    <button class="buy-button">Забрать к себе</button>
+        <div class="section-header">
+            <h2>Наши пушистики</h2>
+            <p>Каждый прошел проверку на пушистость и обнимаемость!</p>
+        </div>
+        
+        <div class="kirby-cards">
+            <div class="kirby-card">
+                <div class="kirby-badge">Хит продаж!</div>
+                <div class="kirby-image">
+                    <img src="img/img1.jpg" alt="Стесняшка бояшка" loading="lazy">
                 </div>
-                <div class="kirby-card">
-                    <div class="kirby-image">
-                        <img src="img/img2.jpg" alt="Кирби 2">
-                    </div>
-                    <h3 class="kirby-name">Брутальный Кирбик</h3>
-                    <p class="kirby-price">2299 руб.</p>
-                    <button class="buy-button">Забрать к себе</button>
+                <h3 class="kirby-name">Стесняшка бояшка</h3>
+                <p class="kirby-desc">Очень скромный, любит читать книжки и пить чай с маршмеллоу. Идеален для спокойных вечеров.</p>
+                <div class="kirby-features">
+                    <span class="feature">💫 Любит тишину</span>
+                    <span class="feature">📚 Умный</span>
                 </div>
-                <div class="kirby-card">
-                    <div class="kirby-image">
-                        <img src="img/img3.jpg" alt="Кирби 3">
-                    </div>
-                    <h3 class="kirby-name">Кирби чмоня</h3>
-                    <p class="kirby-price">1599 руб.</p>
-                    <button class="buy-button">Забрать к себе</button>
-                </div>
+                <p class="kirby-price"><strong>999 руб.</strong> <small>после 18:00 - 899 руб.</small></p>
+                <button class="buy-button">Забрать к себе</button>
             </div>
-            <div class="carousel-dots">
-                <span class="dot active" data-index="0"></span>
-                <span class="dot" data-index="1"></span>
-                <span class="dot" data-index="2"></span>
+
+            <div class="kirby-card featured">
+                <div class="kirby-badge">Новинка!</div>
+                <div class="kirby-image">
+                    <img src="img/img2.jpg" alt="Брутальный Кирбик" loading="lazy">
+                </div>
+                <h3 class="kirby-name">Брутальный Кирбик</h3>
+                <p class="kirby-desc">Прошёл курсы самозащиты и теперь охраняет дом от монстров под кроватью. Суровый, но внутри мягкий.</p>
+                <div class="kirby-features">
+                    <span class="feature">💪 Сильный</span>
+                    <span class="feature">🛡️ Защитник</span>
+                </div>
+                <p class="kirby-price"><strong>2299 руб.</strong></p>
+                <button class="buy-button main">Срочно забрать!</button>
+            </div>
+
+            <div class="kirby-card">
+                <div class="kirby-image">
+                    <img src="img/img3.jpg" alt="Кирби чмоня" loading="lazy">
+                </div>
+                <h3 class="kirby-name">Кирби чмоня</h3>
+                <p class="kirby-desc">Мастер по обнимашкам и поднятию настроения. Если вам грустно - он уже бежит к вам!</p>
+                <div class="kirby-features">
+                    <span class="feature">🤗 Обнимашка</span>
+                    <span class="feature">🎭 Весельчак</span>
+                </div>
+                <p class="kirby-price"><strong>1599 руб.</strong></p>
+                <button class="buy-button">Забрать к себе</button>
+            </div>
+        </div>
+
+        <!--  баннер с акцией -->
+        <div class="promo-banner">
+            <div class="promo-content">
+                <h3>🎉 Скидка 20% на второго кирбика!</h3>
+                <p>Друзья не должны быть одни! Возьми пару - им будет веселее вместе!</p>
             </div>
         </div>
     </section>
 
     <!-- Подвал -->
     <footer>
-        <div class="footer-section">
-            <h3>О нас</h3>
-            <p>Мы занимаемся разведением самых милых кирбиков уже более 3 лет. Наша миссия - дарить кирбиков все кто этого хочет</p>
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h3>Наша история</h3>
+                <p>Всё началось с одного случайно найденного кирбика в старом комоде бабушки... Теперь у нас уже больше 500 довольных хозяев по всей стране! Мы сами влюблены в каждого нашего пушистика ❤️</p>
+                <div class="social-links">
+                    <a href="#" title="Мы в ВК">ВКонтакте</a>
+                    <a href="#" title="Наш Telegram">Telegram</a>
+                    <a href="#" title="Наш Instagram">Instagram</a>
+                </div>
+            </div>
+            
+            <div class="footer-section contacts">
+                <h3>Как нас найти</h3>
+                <div class="contact-item">
+                    <span class="icon">📞</span>
+                    <span>+7 (924) 396-91-40 (Лера)</span>
+                </div>
+                <div class="contact-item">
+                    <span class="icon">✉️</span>
+                    <span>Lymirenia@gmail.com</span>
+                </div>
+                <div class="contact-item">
+                    <span class="icon">📍</span>
+                    <span>г. Улан-Удэ, ул. Ключевская, д. 41<br><small>Работаем с 10:00 до 20:00 без выходных</small></span>
+                </div>
+            </div>
+            
+            <div class="footer-section quick-links">
+                <h3>Полезное</h3>
+                <a href="#">Как ухаживать за кирбиком</a>
+                <a href="#">Истории владельцев</a>
+                <a href="#">Частые вопросы</a>
+                <a href="#">Доставка и оплата</a>
+                <a href="#">Возврат и обмен</a>
+            </div>
         </div>
-        <div class="footer-section">
-            <h3>Контакты</h3>
-            <p>Телефон: +7 (924) 396-91-40</p>
-            <p>Email: Lymirenia@gmail.com</p>
-            <p>Адрес: г. Улан-Удэ, ул. Ключевская, д. 41</p>
-        </div>
-        <div class="footer-section">
-            <h3>Быстрые ссылки</h3>
-            <a href="#">Главная</a>
-            <a href="#">Наши кирбики</a>
-            <a href="#">Контакты</a>
-            <a href="#">Доставка и оплата</a>
+        
+        <div class="copyright">
+            <p>© 2023-2025 Lymirenia. Сделано с ❤️ и большим количеством пуха.</p>
+            <p class="small">Все кирбики проходят проверку на качество и наличие хорошего настроения!</p>
         </div>
     </footer>
-    <div class="copyright">
-        <p>© 2023-2025 Все права защищены. Магазин "Lymirenia"</p>
-    </div>
 
-    <script src="script.js"></script>
+    <!-- JS для интерактивности -->
+    <script>
+        // Простая корзина
+        document.querySelectorAll('.buy-button').forEach(button => {
+            button.addEventListener('click', function() {
+                const count = document.querySelector('.cart-count');
+                count.textContent = parseInt(count.textContent) + 1;
+                count.style.animation = 'bounce 0.5s';
+                setTimeout(() => count.style.animation = '', 500);
+                
+                // Простое уведомление
+                alert('Кирбик добавлен в корзину! 🎉');
+            });
+        });
+
+        // Анимация для карточек при прокрутке
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = "1";
+                    entry.target.style.transform = "translateY(0)";
+                }
+            });
+        });
+
+        document.querySelectorAll('.kirby-card').forEach(card => {
+            card.style.opacity = "0";
+            card.style.transform = "translateY(20px)";
+            card.style.transition = "all 0.6s ease";
+            observer.observe(card);
+        });
+    </script>
 </body>
 </html>
